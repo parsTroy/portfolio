@@ -1,13 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.e9854d32.css",
-    "main.js": "/static/js/main.daeaff5d.js",
+    "main.js": "/static/js/main.abd97538.js",
     "static/media/logo-1.png": "/static/media/logo-1.10dbb5665e2cb2bbf3a9.png",
     "static/media/network.png": "/static/media/network.c0a2e04d73eb997912be.png",
+    "static/media/dev-operations.png": "/static/media/dev-operations.befe5b1e5f8d4c43038d.png",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/rust.png": "/static/media/rust.4f302d224f5820522e28.png",
+    "static/media/financial-risk-insights-platform.png": "/static/media/financial-risk-insights-platform.61455d54ef1e60178343.png",
     "static/media/csharp.png": "/static/media/csharp.23e58705dee64307796f.png",
     "static/media/github.png": "/static/media/github.3b9e32903aa89111875d.png",
+    "static/media/web-server-cpp.png": "/static/media/web-server-cpp.4eb23a17a671f88a918f.png",
     "static/media/crypto.png": "/static/media/crypto.d18bb399759bc13098f7.png",
     "static/media/java.png": "/static/media/java.2be0bca1b95cfc0ce63e.png",
     "static/media/html.png": "/static/media/html.2ba4fabc69a89a8f71e6.png",
@@ -16,10 +19,10 @@
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/index.html",
     "main.e9854d32.css.map": "/static/css/main.e9854d32.css.map",
-    "main.daeaff5d.js.map": "/static/js/main.daeaff5d.js.map"
+    "main.abd97538.js.map": "/static/js/main.abd97538.js.map"
   },
   "entrypoints": [
     "static/css/main.e9854d32.css",
-    "static/js/main.daeaff5d.js"
+    "static/js/main.abd97538.js"
   ]
 }
