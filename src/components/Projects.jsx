@@ -21,19 +21,19 @@ const Projects = () => {
 
                     {/* Grid Item */}
                     <div
-                        style={{ backgroundImage: `url(${DividendEg})` }}
+                        style={{ backgroundImage: `url(${DevOperations})` }}
                         className='shadow-lg shadow-[#040c16] group containor rounded-md flex justify-center items-center mx-auto content-div'>
 
                         {/* Hover Effects */}
                         <div className='opacity-0 group-hover:opacity-100'>
                             <span className='text-2xl font-bold text-[#caccc1] tracking-wider'>
-                                Social Network
+                                dev_operations
                             </span>
                             <div className='pt-8 text-center'>
-                                <a href='https://network-seven-gray.vercel.app/'>
+                                <a href='https://www.devoperations.ca/'>
                                     <button className='text-center rounded-lg px-4 py-3 m-2 bg-[#caccc1] text-[#1b3338] font-bold text-lg'>Demo</button>
                                 </a>
-                                <a href='https://github.com/parsTroy/network'>
+                                <a href='https://github.com/parsTroy/dev_operations'>
                                     <button className='text-center rounded-lg px-4 py-3 m-2 bg-[#caccc1] text-[#1b3338] font-bold text-lg'>Code</button>
                                 </a>
 
@@ -41,19 +41,19 @@ const Projects = () => {
                         </div>
                     </div>
                     <div
-                        style={{ backgroundImage: `url(${RustFinanceCalc})` }}
+                        style={{ backgroundImage: `url(${FinancialRiskInsightsPlatform})` }}
                         className='shadow-lg shadow-[#040c16] group containor rounded-md flex justify-center items-center mx-auto content-div'>
 
                         {/* Hover Effects */}
                         <div className='opacity-0 group-hover:opacity-100'>
                             <span className='text-2xl font-bold text-[#caccc1] tracking-wider'>
-                                Rust Budget Calculator
+                                Financial Risk Insights Platform
                             </span>
                             <div className='pt-8 text-center'>
-                                <a href='https://github.com/parsTroy/rust-finance'>
+                                <a href='https://github.com/parsTroy/financial-risk-insights-platform'>
                                     <button className='text-center rounded-lg px-4 py-3 m-2 bg-[#caccc1] text-[#1b3338] font-bold text-lg'>Clone</button>
                                 </a>
-                                <a href='https://github.com/parsTroy/rust-finance'>
+                                <a href='https://github.com/parsTroy/financial-risk-insights-platform'>
                                     <button className='text-center rounded-lg px-4 py-3 m-2 bg-[#caccc1] text-[#1b3338] font-bold text-lg'>Code</button>
                                 </a>
 
@@ -62,19 +62,19 @@ const Projects = () => {
                     </div>
                     {/* Grid Item */}
                     <div
-                        style={{ backgroundImage: `url(${CryptoEg})` }}
+                        style={{ backgroundImage: `url(${WebServerCpp})` }}
                         className='shadow-lg shadow-[#040c16] group containor rounded-md flex justify-center items-center mx-auto content-div'>
 
                         {/* Hover Effects */}
                         <div className='opacity-0 group-hover:opacity-100'>
                             <span className='text-2xl font-bold text-[#caccc1] tracking-wider'>
-                                Crypto Tracker
+                                C++ Web Server
                             </span>
                             <div className='pt-8 text-center'>
-                                <a href='https://react-cryptobase.web.app/'>
+                                <a href='https://github.com/parsTroy/web-server-cpp'>
                                     <button className='text-center rounded-lg px-4 py-3 m-2 bg-[#caccc1] text-[#1b3338] font-bold text-lg'>Demo</button>
                                 </a>
-                                <a href='https://github.com/parsTroy/react-crypto-watchlist-app'>
+                                <a href='https://github.com/parsTroy/web-server-cpp'>
                                     <button className='text-center rounded-lg px-4 py-3 m-2 bg-[#caccc1] text-[#1b3338] font-bold text-lg'>Code</button>
                                 </a>
 
