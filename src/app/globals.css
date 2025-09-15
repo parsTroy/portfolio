@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
@@ -60,63 +62,65 @@ All colors MUST be HSL.
   }
 }
 
-@theme {
-  --color-background: hsl(0 0% 0%);
-  --color-foreground: hsl(120 100% 75%);
-  --color-card: hsl(0 0% 5%);
-  --color-card-foreground: hsl(120 100% 75%);
-  --color-popover: hsl(0 0% 0%);
-  --color-popover-foreground: hsl(120 100% 75%);
-  --color-primary: hsl(120 100% 50%);
-  --color-primary-foreground: hsl(0 0% 0%);
-  --color-secondary: hsl(0 0% 10%);
-  --color-secondary-foreground: hsl(180 100% 75%);
-  --color-muted: hsl(0 0% 15%);
-  --color-muted-foreground: hsl(120 50% 50%);
-  --color-accent: hsl(300 100% 75%);
-  --color-accent-foreground: hsl(0 0% 0%);
-  --color-destructive: hsl(0 100% 50%);
-  --color-destructive-foreground: hsl(0 0% 100%);
-  --color-border: hsl(120 50% 25%);
-  --color-input: hsl(0 0% 10%);
-  --color-ring: hsl(120 100% 50%);
-  --color-terminal-green: hsl(120 100% 75%);
-  --color-terminal-cyan: hsl(180 100% 75%);
-  --color-terminal-magenta: hsl(300 100% 75%);
-  --color-terminal-amber: hsl(45 100% 75%);
-  --color-terminal-dim: hsl(120 50% 50%);
-  --font-terminal: "Courier Prime", "Monaco", "Consolas", monospace;
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 120 100% 75%;
+    --card: 0 0% 5%;
+    --card-foreground: 120 100% 75%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 120 100% 75%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 180 100% 75%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 120 50% 50%;
+    --accent: 300 100% 75%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 120 50% 25%;
+    --input: 0 0% 10%;
+    --ring: 120 100% 50%;
+    --terminal-green: 120 100% 75%;
+    --terminal-cyan: 180 100% 75%;
+    --terminal-magenta: 300 100% 75%;
+    --terminal-amber: 45 100% 75%;
+    --terminal-dim: 120 50% 50%;
+    --radius: 0rem;
+  }
 }
 
-* {
-  border-color: var(--color-border);
-}
+@layer base {
+  * {
+    @apply border-border;
+  }
 
-body {
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-terminal);
-  overflow-x: hidden;
-}
+  body {
+    @apply bg-background text-foreground font-terminal;
+    overflow-x: hidden;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-/* Custom scrollbar for terminal aesthetic */
-::-webkit-scrollbar {
-  width: 8px;
-}
+  /* Custom scrollbar for terminal aesthetic */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-track {
-  background: var(--color-background);
-}
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-terminal-green);
-  border-radius: 0;
-}
+  ::-webkit-scrollbar-thumb {
+    @apply bg-terminal-green;
+    border-radius: 0;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-terminal-cyan);
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-terminal-cyan;
+  }
 }
