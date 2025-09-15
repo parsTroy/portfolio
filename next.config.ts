@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // Vercel handles optimization automatically
   images: {
-    unoptimized: true
+    domains: [],
   },
 };
 

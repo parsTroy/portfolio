@@ -6,8 +6,7 @@
   "author": "Troy Parsons",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "export": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
