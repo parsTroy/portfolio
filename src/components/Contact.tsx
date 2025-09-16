@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { getCurrentDate, getCurrentTime } from "@/lib/dateUtils";
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
   const currentDate = getCurrentDate();
@@ -13,9 +14,51 @@ export const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    // Check if environment variables are configured
+    if (!process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 
+        !process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 
+        !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID) {
+      console.error('EmailJS environment variables not configured');
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+      
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'devtroyparsons@proton.me'
+        }
+      );
+
+      if (result.status === 200) {
+        setSubmitStatus('success');
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -147,11 +190,30 @@ export const Contact = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-black border border-terminal-green text-terminal-green p-3 hover:border-terminal-cyan hover:text-terminal-cyan hover:shadow-glow-cyan transition-all duration-300"
+                    disabled={isSubmitting}
+                    className="w-full bg-black border border-terminal-green text-terminal-green p-3 hover:border-terminal-cyan hover:text-terminal-cyan hover:shadow-glow-cyan transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <span className="text-terminal-magenta">./</span>execute_send
-                    <span className="text-terminal-magenta ml-2">--now</span>
+                    {isSubmitting ? (
+                      <span className="text-terminal-amber">./sending...</span>
+                    ) : (
+                      <>
+                        <span className="text-terminal-magenta">./</span>execute_send
+                        <span className="text-terminal-magenta ml-2">--now</span>
+                      </>
+                    )}
                   </button>
+
+                  {submitStatus === 'success' && (
+                    <div className="mt-4 p-3 bg-black border border-terminal-green text-terminal-green text-sm">
+                      <span className="text-terminal-cyan">✓</span> Message sent successfully!
+                    </div>
+                  )}
+
+                  {submitStatus === 'error' && (
+                    <div className="mt-4 p-3 bg-black border border-red-500 text-red-400 text-sm">
+                      <span className="text-red-400">✗</span> Failed to send message. Please try again.
+                    </div>
+                  )}
                 </form>
               </div>
             </div>

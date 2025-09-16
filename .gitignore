@@ -42,3 +42,5 @@ next-env.d.ts
 DEPLOYMENT.md
 deploy.sh
 VERCEL_DEPLOYMENT.md
+ENV_VARIABLES.md
+EMAIL_SETUP.md
