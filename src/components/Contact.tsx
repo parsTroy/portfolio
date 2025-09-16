@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { getCurrentDate, getCurrentTime } from "@/lib/dateUtils";
 
 export const Contact = () => {
+  const currentDate = getCurrentDate();
+  const currentTime = getCurrentTime();
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -48,19 +52,23 @@ export const Contact = () => {
                   <div className="h-2"></div>
                   <div>
                     <span className="text-terminal-magenta">EMAIL:</span>
-                    <span className="text-terminal-amber ml-2">your.email@domain.com</span>
+                    <span className="text-terminal-amber ml-2">devtroyparsons@proton.me</span>
                   </div>
                   <div>
                     <span className="text-terminal-magenta">LINKEDIN:</span>
-                    <span className="text-terminal-amber ml-2">/in/yourprofile</span>
+                    <span className="text-terminal-amber ml-2">linkedin.com/in/troyalparsons</span>
                   </div>
                   <div>
                     <span className="text-terminal-magenta">GITHUB:</span>
-                    <span className="text-terminal-amber ml-2">github.com/yourusername</span>
+                    <span className="text-terminal-amber ml-2">github.com/parsTroy</span>
                   </div>
                   <div>
                     <span className="text-terminal-magenta">STATUS:</span>
                     <span className="text-terminal-green ml-2">AVAILABLE FOR OPPORTUNITIES</span>
+                  </div>
+                  <div>
+                    <span className="text-terminal-magenta">LAST_CHECK:</span>
+                    <span className="text-terminal-amber ml-2">{currentDate} {currentTime}</span>
                   </div>
                 </div>
               </div>

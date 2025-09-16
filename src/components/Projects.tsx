@@ -1,12 +1,17 @@
+import { getCurrentDate } from "@/lib/dateUtils";
+
 export const Projects = () => {
+  const currentDate = getCurrentDate();
   const projects = [
     {
       id: "001",
-      name: "project_alpha",
-      description: "Full-stack web application with modern architecture",
-      tech: ["React", "Node.js", "PostgreSQL"],
+      name: "dev_operations",
+      description: "Modern developer collaboration platform with Kanban task management, real-time chat, and team collaboration features. Built with T3 Stack for seamless project management and team communication.",
+      tech: ["Next.js", "TypeScript", "Prisma", "tRPC", "PostgreSQL", "Pusher", "Tailwind CSS"],
       status: "deployed",
-      lines: "~5,000"
+      lines: "~15,000",
+      demo: "https://www.devoperations.ca",
+      github: "https://github.com/parsTroy/dev_operations"
     },
     {
       id: "002", 
@@ -50,13 +55,13 @@ export const Projects = () => {
             </div>
             
             <div className="space-y-1 text-sm">
-              <div><span className="text-terminal-cyan">user@portfolio:~/projects$</span> ls -la</div>
+              <div><span className="text-terminal-cyan">troy@portfolio:~/projects$</span> ls -la</div>
               <div>total {projects.length}</div>
-              <div>drwxr-xr-x 2 user user 4096 Dec 14 2024 ./</div>
-              <div>drwxr-xr-x 3 user user 4096 Dec 14 2024 ../</div>
+              <div>drwxr-xr-x 2 troy troy 4096 {currentDate} ./</div>
+              <div>drwxr-xr-x 3 troy troy 4096 {currentDate} ../</div>
               {projects.map((project) => (
                 <div key={project.id}>
-                  <span className="text-terminal-magenta">-rwxr--r--</span> 1 user user {project.lines.padStart(6)} Dec 14 2024 
+                  <span className="text-terminal-magenta">-rwxr--r--</span> 1 troy troy {project.lines.padStart(6)} {currentDate} 
                   <span className="text-terminal-cyan ml-2">{project.name}/</span>
                 </div>
               ))}
@@ -89,6 +94,19 @@ export const Projects = () => {
                   <p className="text-terminal-dim text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
+                  
+                  {project.id === "001" && (
+                    <div className="mb-4 p-3 bg-black border border-terminal-dim rounded">
+                      <div className="text-terminal-cyan text-xs mb-2 font-terminal">KEY FEATURES:</div>
+                      <div className="text-xs text-terminal-dim space-y-1">
+                        <div>• Drag-and-drop Kanban boards with priority levels</div>
+                        <div>• Real-time chat with @mentions system</div>
+                        <div>• Role-based access control (Admin/Member/Viewer)</div>
+                        <div>• Markdown-powered project documentation</div>
+                        <div>• GitHub integration & live notifications</div>
+                      </div>
+                    </div>
+                  )}
 
                   <div className="mb-4">
                     <div className="text-terminal-magenta text-xs mb-2">STACK:</div>
@@ -103,7 +121,28 @@ export const Projects = () => {
 
                   <div className="flex items-center justify-between text-xs text-terminal-dim pt-4 border-t border-terminal-dim">
                     <span>Lines: {project.lines}</span>
-                    <span className="text-terminal-magenta">./execute</span>
+                    <div className="flex gap-2">
+                      {project.demo && (
+                        <a 
+                          href={project.demo} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-terminal-cyan hover:text-terminal-green transition-colors"
+                        >
+                          ./demo
+                        </a>
+                      )}
+                      {project.github && (
+                        <a 
+                          href={project.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-terminal-magenta hover:text-terminal-green transition-colors"
+                        >
+                          ./github
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -112,8 +151,16 @@ export const Projects = () => {
 
           <div className="text-center mt-12">
             <p className="font-terminal text-terminal-dim">
-              <span className="text-terminal-magenta">{'// Note:'}</span> Project details will be populated with real data
+              <span className="text-terminal-magenta">{'// Note:'}</span> Please check my GitHub for more projects:
             </p>
+            <a 
+              href="https://github.com/parsTroy" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-terminal-cyan hover:text-terminal-green transition-colors"
+            >
+              github.com/parsTroy
+            </a>
           </div>
         </div>
       </div>

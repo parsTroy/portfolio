@@ -24,7 +24,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="font-terminal text-terminal-green text-xl">
             <span className="text-terminal-cyan">[</span>
-            terminal_portfolio
+            portfolio
             <span className="text-terminal-cyan">]</span>
           </div>
           

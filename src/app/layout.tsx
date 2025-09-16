@@ -10,16 +10,21 @@ const courierPrime = Courier_Prime({
 });
 
 export const metadata: Metadata = {
-  title: "Terminal Portfolio - Software Engineer",
-  description: "Software Engineering Graduate Portfolio - 90s Hacker Aesthetic",
+  title: "Troy Parsons - Software Engineer Portfolio",
+  description: "Software Engineering Graduate Portfolio - Full-Stack Developer specializing in TypeScript, React, and modern web technologies",
   authors: [{ name: "Troy Parsons" }],
+  keywords: ["Troy Parsons", "Software Engineer", "Full-Stack Developer", "TypeScript", "React", "Next.js", "Portfolio"],
   openGraph: {
-    title: "Terminal Portfolio - Software Engineer",
-    description: "Software Engineering Graduate Portfolio - 90s Hacker Aesthetic",
+    title: "Troy Parsons - Software Engineer Portfolio",
+    description: "Software Engineering Graduate Portfolio - Full-Stack Developer specializing in TypeScript, React, and modern web technologies",
     type: "website",
+    url: "https://troyparsons.ca",
+    siteName: "Troy Parsons Portfolio",
   },
   twitter: {
     card: "summary_large_image",
+    title: "Troy Parsons - Software Engineer Portfolio",
+    description: "Software Engineering Graduate Portfolio - Full-Stack Developer specializing in TypeScript, React, and modern web technologies",
   },
 };
 

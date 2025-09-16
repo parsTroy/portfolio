@@ -1,4 +1,7 @@
+import { getCurrentDate } from "@/lib/dateUtils";
+
 export const About = () => {
+  const currentDate = getCurrentDate();
   return (
     <section id="about" className="py-20 bg-card border-y border-terminal-green">
       <div className="container mx-auto px-6">
@@ -24,10 +27,11 @@ export const About = () => {
                 <div><span className="text-terminal-cyan">#!/bin/bash</span></div>
                 <div><span className="text-terminal-magenta">echo</span> <span className="text-terminal-amber">&quot;Initializing profile...&quot;</span></div>
                 <div className="h-4"></div>
-                <div><span className="text-terminal-cyan">NAME</span>=<span className="text-terminal-amber">&quot;Software Engineer&quot;</span></div>
+                <div><span className="text-terminal-cyan">NAME</span>=<span className="text-terminal-amber">&quot;Troy Parsons&quot;</span></div>
                 <div><span className="text-terminal-cyan">EDUCATION</span>=<span className="text-terminal-amber">&quot;Software Engineering Graduate&quot;</span></div>
                 <div><span className="text-terminal-cyan">EXPERIENCE</span>=<span className="text-terminal-amber">&quot;2+ years&quot;</span></div>
                 <div><span className="text-terminal-cyan">PASSION</span>=<span className="text-terminal-amber">&quot;Clean code & Innovation&quot;</span></div>
+                <div><span className="text-terminal-cyan">LAST_UPDATED</span>=<span className="text-terminal-amber">&quot;{currentDate}&quot;</span></div>
                 <div className="h-4"></div>
                 <div><span className="text-terminal-magenta">echo</span> <span className="text-terminal-amber">&quot;Profile loaded successfully!&quot;</span></div>
               </div>
@@ -39,9 +43,9 @@ export const About = () => {
                   <span className="text-terminal-magenta">{'>'}</span> System Overview
                 </h3>
                 <p className="text-base leading-relaxed mb-6">
-                  Software engineering graduate with hands-on experience in developing 
-                  robust applications and implementing innovative solutions. I thrive 
-                  in environments where clean, efficient code meets creative problem-solving.
+                  Software engineering graduate from Toronto with experience building 
+                  full-stack applications. I enjoy working with modern technologies 
+                  and solving real world problems through code.
                 </p>
                 
                 <h3 className="text-xl text-terminal-cyan mb-4">

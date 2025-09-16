@@ -2,22 +2,26 @@
 
 import { Terminal } from "./Terminal";
 import { MatrixBackground } from "./MatrixBackground";
+import { getCurrentDate } from "@/lib/dateUtils";
 
 export const Hero = () => {
+  const currentDate = getCurrentDate();
+  
   const terminalLines = [
     "whoami",
-    "software_engineer.exe",
+    "troy_parsons",
     "cat /etc/profile",
     "# Software Engineering Graduate",
+    "# Full-Stack Developer | Toronto, ON",
     "# Passionate about clean code and innovative solutions",
     "ls -la /skills",
     "total 8",
-    "drwxr-xr-x 2 user user 4096 Dec 14 2024 ./",
-    "drwxr-xr-x 3 user user 4096 Dec 14 2024 ../",
-    "-rw-r--r-- 1 user user  256 Dec 14 2024 javascript.js",
-    "-rw-r--r-- 1 user user  256 Dec 14 2024 python.py",
-    "-rw-r--r-- 1 user user  256 Dec 14 2024 react.jsx",
-    "-rw-r--r-- 1 user user  256 Dec 14 2024 node.js",
+    `drwxr-xr-x 2 troy troy 4096 ${currentDate} ./`,
+    `drwxr-xr-x 3 troy troy 4096 ${currentDate} ../`,
+    `-rw-r--r-- 1 troy troy  256 ${currentDate} typescript.ts`,
+    `-rw-r--r-- 1 troy troy  256 ${currentDate} react.jsx`,
+    `-rw-r--r-- 1 troy troy  256 ${currentDate} next.js`,
+    `-rw-r--r-- 1 troy troy  256 ${currentDate} node.js`,
     "echo 'Welcome to my digital space...'",
     "Welcome to my digital space...",
   ];
@@ -43,7 +47,7 @@ export const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-terminal text-terminal-cyan mb-4 animate-pulse-glow">
-              SOFTWARE_ENGINEER.EXE
+              TROY_PARSONS.EXE
             </h1>
             
             <div className="text-terminal-magenta font-terminal text-lg mb-8">
