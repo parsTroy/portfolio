@@ -3,9 +3,11 @@
 import { Terminal } from "./Terminal";
 import { MatrixBackground } from "./MatrixBackground";
 import { getCurrentDate } from "@/lib/dateUtils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const Hero = () => {
   const currentDate = getCurrentDate();
+  const isMobile = useIsMobile();
   
   const terminalLines = [
     "whoami",
@@ -26,6 +28,41 @@ export const Hero = () => {
     "Welcome to my digital space...",
   ];
 
+  // Mobile-optimized version
+  if (isMobile) {
+    return (
+      <section id="home" className="min-h-[60vh] flex items-center justify-center bg-black relative overflow-hidden pt-20">
+        <MatrixBackground />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center">
+            <h1 className="text-lg sm:text-xl font-terminal text-terminal-cyan mb-4 animate-pulse-glow">
+              TROY_PARSONS.EXE
+            </h1>
+            
+            <div className="text-terminal-magenta font-terminal text-sm mb-6">
+              <span className="text-terminal-amber">{'>'}</span> Software Engineer
+              <span className="animate-blink">_</span>
+            </div>
+
+            <div className="flex flex-wrap gap-2 justify-center">
+              <span className="px-2 py-1 border border-terminal-green text-terminal-green font-terminal text-xs">
+                [READY]
+              </span>
+              <span className="px-2 py-1 border border-terminal-cyan text-terminal-cyan font-terminal text-xs">
+                [ONLINE]
+              </span>
+              <span className="px-2 py-1 border border-terminal-magenta text-terminal-magenta font-terminal text-xs">
+                [AVAILABLE]
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop version
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
       <MatrixBackground />

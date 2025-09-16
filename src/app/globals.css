@@ -123,4 +123,62 @@ All colors MUST be HSL.
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-terminal-cyan;
   }
+
+  /* Mobile-specific animations and utilities */
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .animate-blink {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      text-shadow: 0 0 5px hsl(var(--terminal-cyan) / 0.5);
+    }
+    50% { 
+      text-shadow: 0 0 20px hsl(var(--terminal-cyan) / 0.8), 0 0 30px hsl(var(--terminal-cyan) / 0.6);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Mobile menu slide animation */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out;
+  }
+
+  /* Mobile-optimized spacing */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    /* Reduce font sizes for better mobile readability */
+    .text-4xl {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+    
+    .text-6xl {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
 }
