@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 interface TerminalProps {
   lines: string[];
@@ -25,7 +24,6 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
   const [completedWords, setCompletedWords] = useState(0);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-  const isMobile = useIsMobile();
 
   // Portfolio-related typing text options
   const typingTexts = [
@@ -176,14 +174,6 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
     setStartTime(null);
   };
 
-  const getInputDisplay = () => {
-    if (gameState === 'idle') {
-      return currentInput;
-    } else if (gameState === 'playing') {
-      return userInput;
-    }
-    return "";
-  };
 
   const getPromptText = () => {
     if (gameState === 'idle') {
@@ -222,7 +212,6 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
               {gameText.split(' ').map((word, wordIndex) => {
                 const isCompleted = wordIndex < completedWords;
                 const isCurrent = wordIndex === currentWordIndex;
-                const isUpcoming = wordIndex > currentWordIndex;
                 
                 return (
                   <span
