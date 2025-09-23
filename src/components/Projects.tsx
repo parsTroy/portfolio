@@ -25,11 +25,13 @@ export const Projects = () => {
     },
     {
       id: "003",
-      name: "mobile_companion",
-      description: "Cross-platform mobile application",
-      tech: ["React Native", "Firebase"],
-      status: "development",
-      lines: "~2,800"
+      name: "monkey_budget",
+      description: "Modern personal finance iOS app with effortless budgeting, beautiful analytics, and secure cloud sync. Features guest mode, voice input, receipt scanning, and privacy-first design for building healthy financial habits.",
+      tech: ["Swift", "SwiftUI", "Core Data", "CloudKit", "Vision Framework", "Speech Framework"],
+      status: "deployed",
+      lines: "~4,200",
+      demo: "https://apps.apple.com/us/app/monkey-budget/id6747319372",
+      github: "https://github.com/parsTroy/monkeybudget"
     }
   ];
 
@@ -119,6 +121,19 @@ export const Projects = () => {
                         <div>• Future value calculator with compound interest</div>
                         <div>• High dividend yield stock recommendations</div>
                         <div>• Bank-level security with encrypted data storage</div>
+                      </div>
+                    </div>
+                  )}
+
+                  {project.id === "003" && (
+                    <div className="mb-4 p-3 bg-black border border-terminal-dim rounded">
+                      <div className="text-terminal-cyan text-xs mb-2 font-terminal">KEY FEATURES:</div>
+                      <div className="text-xs text-terminal-dim space-y-1">
+                        <div>• Guest mode - no account required to get started</div>
+                        <div>• Voice input & receipt scanning with OCR</div>
+                        <div>• Beautiful analytics with vibrant charts & progress bars</div>
+                        <div>• Cloud sync with Supabase integration</div>
+                        <div>• Privacy-first design with biometric authentication</div>
                       </div>
                     </div>
                   )}
