@@ -245,7 +245,7 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
               <div>Words Per Minute: <span className="text-terminal-green">{wpm}</span></div>
               <div>Accuracy: <span className="text-terminal-green">{accuracy}%</span></div>
               <div className="mt-2 text-terminal-dim">
-                Type 'start' to try again with different text
+                Type &apos;start&apos; to try again with different text
               </div>
             </div>
           </div>
