@@ -43,13 +43,34 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
     }
   }, [gameState]);
 
+  // Initial cryptic log when component mounts
+  useEffect(() => {
+    console.log("[SHADOW_SYSTEM] The terminal awakens...");
+    console.log("[SHADOW_SYSTEM] Five ancient texts lie dormant within the void");
+    console.log("[SHADOW_SYSTEM] To unlock the forbidden knowledge, speak the word of beginning");
+    console.log("[SHADOW_SYSTEM] The answer lies in what every journey must have...");
+    console.log("[SHADOW_SYSTEM] Seek the command that begins all things");
+  }, []);
+
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && currentInput.trim().toLowerCase() === 'start' && gameState === 'idle') {
+      console.log("[SHADOW_SYSTEM] The sacred word has been spoken...");
+      console.log("[SHADOW_SYSTEM] The ancient texts stir from their slumber");
+      console.log("[SHADOW_SYSTEM] Reality bends as the challenge materializes");
+      console.log("[SHADOW_SYSTEM] The void whispers secrets of speed and precision");
+      
+      const selectedText = typingTexts[Math.floor(Math.random() * typingTexts.length)];
+      console.log(`[SHADOW_SYSTEM] A text emerges from the ether: "${selectedText.substring(0, 30)}..."`);
+      console.log(`[SHADOW_SYSTEM] The scroll contains ${selectedText.split(' ').length} sacred words, ${selectedText.length} symbols of power`);
+      console.log("[SHADOW_SYSTEM] The trial begins... prove your worth, mortal");
+      
       setGameState('playing');
-      setGameText(typingTexts[Math.floor(Math.random() * typingTexts.length)]);
+      setGameText(selectedText);
       setUserInput("");
       setStartTime(Date.now());
       setCurrentInput("");
+      
+      console.log("[SHADOW_SYSTEM] The waters of time begin to flow...");
     }
   };
 
@@ -66,6 +87,10 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
     // Check if current word is completed
     if (input.trim() === currentWord && currentWordIndex < words.length - 1) {
       // Word completed, move to next word
+      console.log(`[SHADOW_SYSTEM] The word "${currentWord}" dissolves into the void...`);
+      console.log(`[SHADOW_SYSTEM] Progress through the labyrinth: ${completedWords + 1}/${words.length} chambers (${Math.round(((completedWords + 1) / words.length) * 100)}% illuminated)`);
+      console.log(`[SHADOW_SYSTEM] The next fragment of knowledge awaits...`);
+      
       setCompletedWords(prev => prev + 1);
       setCurrentWordIndex(prev => prev + 1);
       setUserInput('');
@@ -76,6 +101,10 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
       setTotalChars(completedText.length);
     } else if (input.trim() === currentWord && currentWordIndex === words.length - 1) {
       // All words completed
+      console.log("[SHADOW_SYSTEM] The final word crumbles into stardust...");
+      console.log("[SHADOW_SYSTEM] The ancient trial reaches its conclusion");
+      console.log("[SHADOW_SYSTEM] The void calculates your worth...");
+      
       setCompletedWords(prev => prev + 1);
       setCorrectChars(gameText.length);
       setTotalChars(gameText.length);
@@ -87,6 +116,14 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
         const calculatedWpm = Math.round(wordsTyped / timeInMinutes);
         
         const calculatedAccuracy = Math.round((gameText.length / gameText.length) * 100);
+        
+        console.log(`[SHADOW_SYSTEM] The Oracle speaks your fate:`);
+        console.log(`   Words per moon cycle: ${calculatedWpm}`);
+        console.log(`   Purity of soul: ${calculatedAccuracy}%`);
+        console.log(`   Sacred symbols mastered: ${wordsTyped}`);
+        console.log(`   Time in the void: ${(timeInMinutes * 60).toFixed(1)} heartbeats`);
+        console.log(`   Your rank: ${calculatedWpm >= 60 ? 'ARCHMAGE' : calculatedWpm >= 40 ? 'SAGE' : calculatedWpm >= 20 ? 'APPRENTICE' : 'NOVICE'}`);
+        console.log("[SHADOW_SYSTEM] The waters of time still... the trial is complete");
         
         setWpm(calculatedWpm);
         setAccuracy(calculatedAccuracy);
@@ -111,11 +148,21 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
         const wordsTyped = completedWords + (input.trim() === currentWord ? 1 : 0);
         const calculatedWpm = Math.round(wordsTyped / timeInMinutes);
         setCurrentWpm(calculatedWpm);
+        
+        // Log WPM updates every 5 words or every 10 seconds
+        if (wordsTyped % 5 === 0 || Math.floor(timeInMinutes * 6) % 10 === 0) {
+          console.log(`[SHADOW_SYSTEM] The void whispers: ${calculatedWpm} symbols per moon cycle (${wordsTyped} fragments in ${timeInMinutes.toFixed(1)} eternities)`);
+        }
       }
     }
   };
 
   const resetGame = () => {
+    console.log("[SHADOW_SYSTEM] The ancient texts return to their slumber...");
+    console.log("[SHADOW_SYSTEM] The void erases all traces of the trial");
+    console.log("[SHADOW_SYSTEM] The terminal awaits the next seeker of knowledge");
+    console.log("[SHADOW_SYSTEM] Speak the word of beginning once more to awaken the texts...");
+    
     setGameState('idle');
     setGameText("");
     setUserInput("");
