@@ -15,11 +15,13 @@ export const Projects = () => {
     },
     {
       id: "002", 
-      name: "data_processor",
-      description: "High-performance data processing pipeline",
-      tech: ["Python", "FastAPI", "Redis"],
-      status: "active",
-      lines: "~3,200"
+      name: "dividnd_portfolio",
+      description: "Professional dividend portfolio tracking platform with real-time analytics, income projections, and investment insights. Built for dividend investors to maximize passive income through data-driven decisions.",
+      tech: ["Next.js", "TypeScript", "Prisma", "tRPC", "PostgreSQL", "Tailwind CSS", "NextAuth.js"],
+      status: "deployed",
+      lines: "~8,500",
+      demo: "https://www.dividnd.com",
+      github: "https://github.com/parsTroy/dividnd"
     },
     {
       id: "003",
@@ -104,6 +106,19 @@ export const Projects = () => {
                         <div>• Role-based access control (Admin/Member/Viewer)</div>
                         <div>• Markdown-powered project documentation</div>
                         <div>• GitHub integration & live notifications</div>
+                      </div>
+                    </div>
+                  )}
+
+                  {project.id === "002" && (
+                    <div className="mb-4 p-3 bg-black border border-terminal-dim rounded">
+                      <div className="text-terminal-cyan text-xs mb-2 font-terminal">KEY FEATURES:</div>
+                      <div className="text-xs text-terminal-dim space-y-1">
+                        <div>• Real-time portfolio tracking with performance analytics</div>
+                        <div>• Dividend income projections & yield calculations</div>
+                        <div>• Future value calculator with compound interest</div>
+                        <div>• High dividend yield stock recommendations</div>
+                        <div>• Bank-level security with encrypted data storage</div>
                       </div>
                     </div>
                   )}
