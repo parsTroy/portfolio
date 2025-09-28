@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — [parsTroy]
 
-## Getting Started
+A Next.js + TypeScript portfolio website showcasing my work, skills, and projects.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This repository houses my personal portfolio website. It's meant to serve as:
+
+- A hub to highlight my skills, experience, and projects
+- A place where visitors can see live demos, read about my background, and contact me
+- A demonstration of my front-end / full-stack development abilities
+
+It is not intended as an open-source product or library; it's a personal site rather than a reusable package.
+
+## Tech Stack & Key Features
+
+Here's a summary of the tools and techniques used:
+
+| Technology | Purpose |
+|------------|---------|
+| Next.js (v14+) with app directory / routing | Framework & routing |
+| TypeScript | Type safety and developer tooling |
+| Tailwind CSS | Utility-first styling |
+| ESLint + linting config | Code consistency and error prevention |
+| PostCSS | CSS transformations |
+| Optional asset optimization / image handling | For performance and best practices |
+
+## Project Structure
+
+```
+src/
+├── app/                 # Next.js app directory
+│   ├── globals.css     # Global styles
+│   ├── layout.tsx      # Root layout component
+│   └── page.tsx        # Home page
+├── components/         # React components
+│   ├── ui/            # Reusable UI components
+│   ├── About.tsx      # About section
+│   ├── Contact.tsx    # Contact form
+│   ├── Hero.tsx       # Hero section
+│   ├── Navigation.tsx # Navigation component
+│   └── Projects.tsx   # Projects showcase
+├── hooks/             # Custom React hooks
+└── lib/               # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project uses modern development practices:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **TypeScript** for type safety and better developer experience
+- **Tailwind CSS** for utility-first styling
+- **ESLint** for code quality and consistency
+- **Next.js App Router** for modern routing and performance
+- **Responsive design** for optimal viewing across devices
 
-## Learn More
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
+For professional inquiries or questions about this portfolio, please reach out through the contact form on the website or connect with me on LinkedIn.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*This portfolio is built with Next.js and deployed on Vercel for optimal performance and reliability.*
