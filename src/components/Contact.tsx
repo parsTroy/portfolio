@@ -121,8 +121,7 @@ export const Contact = () => {
                   <span className="text-terminal-magenta">{'>'}</span> Let&apos;s Connect
                 </h3>
                 <p className="text-base leading-relaxed text-terminal-dim">
-                  Always interested in discussing new opportunities, collaborating on 
-                  innovative projects, or just talking shop about the latest in software development.
+                  Always interested in discussing new opportunities, collaborating, or just talking shop about why it works on my machine.
                 </p>
                 <div className="mt-6">
                   <div className="flex items-center gap-2 text-terminal-green">

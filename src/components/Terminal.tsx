@@ -25,13 +25,18 @@ export const Terminal = ({ lines, prompt = "user@terminal:~$", className = "" }:
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Portfolio-related typing text options
+  // Old School RuneScape lore typing text options
   const typingTexts = [
-    "Troy Parsons is a passionate software engineer specializing in full-stack development with expertise in TypeScript, React, Next.js, and modern web technologies. Based in Toronto, he creates innovative solutions that combine clean code with user-centered design.",
-    "The dev_operations platform revolutionizes team collaboration with real-time Kanban boards, instant messaging, and GitHub integration. Built using the T3 Stack, it provides seamless project management for development teams worldwide.",
-    "Dividnd is a professional dividend portfolio tracking platform that helps investors maximize passive income through real-time analytics, yield calculations, and intelligent stock recommendations. Secure, private, and designed for serious investors.",
-    "Monkey Budget is a modern iOS personal finance app featuring effortless budgeting, voice input, receipt scanning, and beautiful analytics. Built with Swift and SwiftUI, it prioritizes privacy and user experience for building healthy financial habits.",
-    "This portfolio showcases cutting-edge web development using Next.js, TypeScript, and Tailwind CSS. Each project demonstrates expertise in modern frameworks, responsive design, and performance optimization for both web and mobile platforms."
+    "In the ancient kingdom of Misthalin, the White Knights of Falador stand as guardians of justice and order. Their sacred vows bind them to protect the innocent and uphold the laws of Saradomin, the god of order and wisdom.",
+    "The Dragon Slayer quest tells the tale of Elvarg, a fearsome green dragon that terrorized the island of Crandor. Only those brave enough to forge the legendary Dragon Slayer sword can hope to defeat this ancient beast.",
+    "Beneath the city of Varrock lies the mysterious Stronghold of Security, where four guardians test adventurers seeking the ancient treasures within. Each guardian represents a different aspect of security and wisdom.",
+    "The Barrows brothers were six powerful warriors who fell in battle and were buried in ancient tombs beneath the Barrows hills. Their restless spirits now guard their legendary equipment, waiting for worthy challengers.",
+    "In the depths of the Wilderness, the Chaos Elemental roams freely, a creature of pure chaos energy that drops powerful weapons forged in the fires of destruction. Only the bravest dare venture into its domain.",
+    "The Grand Exchange of Varrock revolutionized trade across Gielinor, allowing adventurers to buy and sell goods without the need for direct player interaction. This marketplace became the economic heart of the realm.",
+    "Zamorak, the god of chaos and destruction, seeks to overthrow the established order and bring about a new age of freedom through anarchy. His followers worship strength and individual power above all else.",
+    "The ancient city of Prifddinas, home to the elves, was sealed away for centuries behind the crystal barrier. Only those who complete the arduous quest to restore the elven lands can witness its ethereal beauty.",
+    "Beneath the waves of the ocean lies the underwater city of Zanaris, accessible only through the mysterious fairy rings scattered across the realm. This magical realm exists between dimensions.",
+    "The TzHaar civilization lives within the volcanic depths of Karamja, forging weapons and armor from the molten rock of their homeland. Their society values strength and honor above all else."
   ];
 
 

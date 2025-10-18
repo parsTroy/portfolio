@@ -15,7 +15,7 @@ export const Hero = () => {
     "cat /etc/profile",
     "# Software Engineering Graduate",
     "# Full-Stack Developer | Toronto, ON",
-    "# Passionate about clean code and innovative solutions",
+    "# Passionate about clean code and Uncle Bob",
     "ls -la /skills",
     "total 8",
     `drwxr-xr-x 2 troy troy 4096 ${currentDate} ./`,

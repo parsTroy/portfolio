@@ -20,7 +20,7 @@ export default function Home() {
           <div className="font-terminal text-terminal-dim text-sm">
             <span className="text-terminal-magenta">© {currentYear}</span> Troy Parsons - Software Engineering Portfolio
             <span className="text-terminal-cyan mx-2">|</span>
-            <span className="text-terminal-magenta">./</span>built_with_passion
+            <span className="text-terminal-magenta">./</span>built_with_thumb_men_from_spy_kids_1
             <span className="text-terminal-cyan mx-2">|</span>
             <span className="text-terminal-magenta">./</span>toronto_on
           </div>

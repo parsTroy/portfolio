@@ -30,7 +30,7 @@ export const About = () => {
                 <div><span className="text-terminal-cyan">NAME</span>=<span className="text-terminal-amber">&quot;Troy Parsons&quot;</span></div>
                 <div><span className="text-terminal-cyan">EDUCATION</span>=<span className="text-terminal-amber">&quot;Software Engineering Graduate&quot;</span></div>
                 <div><span className="text-terminal-cyan">EXPERIENCE</span>=<span className="text-terminal-amber">&quot;2+ years&quot;</span></div>
-                <div><span className="text-terminal-cyan">PASSION</span>=<span className="text-terminal-amber">&quot;Clean code & Innovation&quot;</span></div>
+                <div><span className="text-terminal-cyan">PASSION</span>=<span className="text-terminal-amber">&quot;Clean code & Uncle Bob&quot;</span></div>
                 <div><span className="text-terminal-cyan">LAST_UPDATED</span>=<span className="text-terminal-amber">&quot;{currentDate}&quot;</span></div>
                 <div className="h-4"></div>
                 <div><span className="text-terminal-magenta">echo</span> <span className="text-terminal-amber">&quot;Profile loaded successfully!&quot;</span></div>
@@ -44,8 +44,7 @@ export const About = () => {
                 </h3>
                 <p className="text-base leading-relaxed mb-6">
                   Software engineering graduate from Toronto with experience building 
-                  full-stack applications. I enjoy working with modern technologies 
-                  and solving real world problems through code.
+                  full-stack applications.
                 </p>
                 
                 <h3 className="text-xl text-terminal-cyan mb-4">

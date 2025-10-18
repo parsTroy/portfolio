@@ -17,7 +17,7 @@ export const Navigation = () => {
 
   const scrollToSection = (href: string, id: string) => {
     setActiveSection(id);
-    setIsMobileMenuOpen(false); // Close mobile menu after selection
+    setIsMobileMenuOpen(false);
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: "smooth" });
   };
