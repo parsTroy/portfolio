@@ -52,8 +52,6 @@ export default {
       },
       boxShadow: {
         'glow-green': '0 0 20px hsl(120 100% 50% / 0.5)',
-        'glow-magenta': '0 0 20px hsl(300 100% 75% / 0.5)',
-        'glow-cyan': '0 0 20px hsl(180 100% 75% / 0.5)',
       },
       keyframes: {
         "accordion-down": {
