@@ -81,7 +81,7 @@ export const Hero = () => {
               </pre>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-terminal text-terminal-cyan mb-4 animate-pulse-glow">
+            <h1 className="text-4xl md:text-6xl font-terminal text-terminal-cyan mb-4">
               TROY_PARSONS.EXE
             </h1>
 

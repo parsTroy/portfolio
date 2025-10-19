@@ -49,7 +49,6 @@ All colors MUST be HSL.
     /* Glow effects */
     --glow-primary: 0 0 20px hsl(120 100% 50% / 0.5);
     --glow-accent: 0 0 20px hsl(0 0% 100% / 0.5);
-    --glow-cyan: 0 0 20px hsl(210 100% 50% / 0.5);
 
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 120 100% 75%;
@@ -132,19 +131,6 @@ All colors MUST be HSL.
 
   .animate-blink {
     animation: blink 1s infinite;
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% { 
-      text-shadow: 0 0 5px hsl(var(--terminal-cyan) / 0.5);
-    }
-    50% { 
-      text-shadow: 0 0 20px hsl(var(--terminal-cyan) / 0.8), 0 0 30px hsl(var(--terminal-cyan) / 0.6);
-    }
-  }
-
-  .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
   }
 
   /* Mobile menu slide animation */
