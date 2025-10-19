@@ -86,7 +86,7 @@ export const Hero = () => {
             </h1>
             
             <div className="text-terminal-magenta font-terminal text-lg mb-8">
-              <span className="text-terminal-amber">{'>'}</span> Executing innovative solutions...
+              <span className="text-terminal-amber">{'>'}</span>Cold starting -43°...
               <span className="animate-blink">_</span>
             </div>
 
