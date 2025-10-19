@@ -8,7 +8,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export const Hero = () => {
   const currentDate = getCurrentDate();
   const isMobile = useIsMobile();
-  
+
   const terminalLines = [
     "whoami",
     "troy_parsons",
@@ -31,13 +31,13 @@ export const Hero = () => {
     return (
       <section id="home" className="min-h-[60vh] flex items-center justify-center bg-black relative overflow-hidden pt-20">
         <MatrixBackground />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center">
             <h1 className="text-lg sm:text-xl font-terminal text-terminal-cyan mb-4 animate-pulse-glow">
               TROY_PARSONS.EXE
             </h1>
-            
+
             <div className="text-terminal-magenta font-terminal text-sm mb-6">
               <span className="text-terminal-amber">{'>'}</span> Software Engineer
               <span className="animate-blink">_</span>
@@ -70,7 +70,7 @@ export const Hero = () => {
           <div className="text-center lg:text-left">
             <div className="font-terminal text-terminal-green mb-8">
               <pre className="text-xs sm:text-sm leading-tight">
-{`
+                {`
     ████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗     
     ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║     
        ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║     
@@ -80,13 +80,13 @@ export const Hero = () => {
 `}
               </pre>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-terminal text-terminal-cyan mb-4 animate-pulse-glow">
               TROY_PARSONS.EXE
             </h1>
-            
+
             <div className="text-terminal-magenta font-terminal text-lg mb-8">
-              <span className="text-terminal-amber">{'>'}</span>Cold starting -43°...
+              <span className="text-terminal-amber">{'>'}</span> Cold starting -43°...
               <span className="animate-blink">_</span>
             </div>
 
