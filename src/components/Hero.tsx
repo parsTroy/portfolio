@@ -15,7 +15,7 @@ export const Hero = () => {
     "cat /etc/profile",
     "# Software Engineering Graduate",
     "# Full-Stack Developer | Toronto, ON",
-    "# Passionate about clean code and Uncle Bob",
+    "# Passionate about clean code but not too clean",
     "ls -la /skills",
     "total 8",
     `drwxr-xr-x 2 troy troy 4096 ${currentDate} ./`,
@@ -24,8 +24,6 @@ export const Hero = () => {
     `-rw-r--r-- 1 troy troy  256 ${currentDate} react.jsx`,
     `-rw-r--r-- 1 troy troy  256 ${currentDate} next.js`,
     `-rw-r--r-- 1 troy troy  256 ${currentDate} node.js`,
-    "echo 'Welcome to my digital space...'",
-    "Welcome to my digital space...",
   ];
 
   // Mobile-optimized version
